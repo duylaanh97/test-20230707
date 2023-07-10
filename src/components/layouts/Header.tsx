@@ -2,22 +2,27 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 import className from "clsx";
+import Image from "next/image";
 
 const tabMenu = [
   {
-    name: "Về REDT",
-    slug: "/ve-redt",
-    logo: "https://s3.ap-southeast-1.amazonaws.com/users.meeyland/articles/aboutmeeygroupmenubar.1669964487946.png?w=24&h=24",
+    name: "自分の記録",
+    slug: "/1",
+    logo: "/icons/listing.svg",
   },
   {
-    name: "Sản phẩm",
-    slug: "/san-pham",
-    logo: "https://s3.ap-southeast-1.amazonaws.com/users.meeyland/articles/ecosystemmenubar.1669964473834.png?w=24&h=24",
+    name: "チャレンジ",
+    slug: "/2",
+    logo: "/icons/challenge.svg",
   },
   {
-    name: "Hợp tác kinh doanh",
-    slug: "/hop-tac-kinh-doanh",
-    logo: "https://s3.ap-southeast-1.amazonaws.com/users.meeyland/articles/shareholdermenubar.1669964460553.png?w=24&h=24",
+    name: "お知らせ",
+    slug: "/2",
+    logo: "/icons/info.svg",
+  },
+  {
+    logo: "/icons/menu.svg",
+    isHamberger: true,
   },
 ];
 
@@ -32,25 +37,33 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed top-0 left-0 w-full z-10 bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1)]"
+      className="fixed top-0 left-0 w-full z-10 bg-[#414141] shadow-[rgba(0,0,0,0.16)"
     >
-      <div className="flex justify-between items-center px-4 py-3 w-full h-[44px] md:h-[56px]">
+      <div className="flex justify-between items-center py-3 h-[44px] md:h-[40px] px-40">
         <Link href={"/"} title="Home">
-          LOGO
+          <Image src="/images/Logo.png" alt="Logo" width={109} height={40} />
         </Link>
-        <div className="lg:flex gap-[0.25rem] md:hidden xs:hidden sm:hidden">
+        <div className="lg:flex gap-10 md:hidden xs:hidden sm:hidden">
           {tabMenu.map((item: any, index: number) => {
             return (
               <div
                 key={index}
                 className={className(
-                  "text-base text-black-11 font-medium cursor-pointer hover:text-blue-08 hover:bg-background-blue-01 hover:rounded-3xl y-2",
-                  currentPath.includes(item.slug) &&
-                    "text-blue-08 bg-background-blue-01 rounded-3xl"
+                  "text-base text-[rgba(255,255,255,1)] font-light cursor-pointer hover:text-[rgba(255,150,60,1)] y-2",
+                  currentPath.includes(item.slug) && "text-[rgba(255,150,60,1)]"
                 )}
                 onClick={() => router.push(item.slug ?? "/")}
               >
-                {item.name}
+                <div className="flex items-center">
+                  <Image
+                    src={item.logo}
+                    width={32}
+                    height={32}
+                    alt="menu"
+                    className="text-[rgba(255,150,60,1)]"
+                  />
+                  <span className="ml-2">{item.name}</span>
+                </div>
               </div>
             );
           })}
