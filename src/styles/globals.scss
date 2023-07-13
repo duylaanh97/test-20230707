@@ -21,3 +21,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.hexagon {
+  position: relative;
+  overflow: hidden;
+  margin: 2em auto;
+  width: 10em; height: 10em;
+  transform: rotate(-30deg) skewX(30deg) scaleY(.866);
+}
+.hexagon:before {
+  position: absolute;
+  right: 6.7%; bottom: 0; left: 6.7%; top: 0;
+  transform: scaleY(1.155) skewX(-30deg) rotate(30deg);
+  background: linear-gradient(to right, rgba(255, 204, 33, 1), rgba(255, 150, 60, 1));
+  color: white;
+  font: 1em/10 Verdana, sans-serif;
+  text-align: center;
+  text-shadow: 0 0 .5em black;
+  content: ' ';
+}

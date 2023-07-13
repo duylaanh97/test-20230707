@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "default-inter": ["Inter", "ui-sans-serif"],
+        noto: ["Noto Sans JP", "sans-serif"],
       },
       fontSize: {
         //Font size / LineHeight

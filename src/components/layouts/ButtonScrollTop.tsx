@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const ButtonScrollTop = () => {
@@ -27,12 +28,18 @@ const ButtonScrollTop = () => {
   return (
     <div
       className={clsx(
-        "fixed rounded-full w-10 h-10 bottom-5 md:bottom-10 right-5 md:right-10 bg-white flex items-center justify-center cursor-pointer shadow-full",
+        "fixed rounded-full w-10 h-10 bottom-5 md:bottom-36 border border-solid border-gray-400 right-5 md:right-10 bg-white flex items-center justify-center cursor-pointer",
         { hidden: !visible, block: visible }
       )}
       onClick={scrollToTop}
     >
-      <i className="ms ms-arrow_next text-gray-400 text-fs-20 -rotate-90" />
+      <Image
+        src={"/icons/arrow_up.svg"}
+        className="text-gray-400 text-fs-20"
+        alt="arrow_up"
+        width={15}
+        height={8}
+      />
     </div>
   );
 };

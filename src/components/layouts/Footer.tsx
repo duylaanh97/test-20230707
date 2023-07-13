@@ -33,10 +33,7 @@ const dataFooter = [
 
 const FooterDesktop = () => {
   return (
-    <footer
-      id="footer"
-      className="fixed bottom-0 left-0 w-full z-10 bg-[#414141]"
-    >
+    <footer id="footer" className="w-full z-10 bg-[#414141]">
       <div className="flex jitems-center py-3 h-[104px] md:h-[104px] px-40">
         {dataFooter.map((item, index) => (
           <div className={styles.footerLinkItem} key={item.url}>

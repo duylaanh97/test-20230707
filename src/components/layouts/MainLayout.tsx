@@ -12,17 +12,15 @@ const MainLayout = ({ classNames, children }: IMainLayoutProps) => {
   return (
     <div className={className(classNames)}>
       <Header />
-      <div className="md:flex">
-        <main
-          className={clsx(
-            `mt-11 md:mt-[80px] md:mx-auto relative min-h-[calc(100vh-80px)]`,
-            classNames
-          )}
-        >
-          {children}
-        </main>
-        <ButtonScrollTop />
-      </div>
+      <main
+        className={clsx(
+          `mt-11 md:mt-[64px] relative min-h-[calc(100vh-80px)] pb-20`,
+          classNames
+        )}
+      >
+        {children}
+      </main>
+      <ButtonScrollTop />
       <Footer />
     </div>
   );
