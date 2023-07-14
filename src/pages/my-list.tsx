@@ -1,9 +1,10 @@
+import List from "@/components/List/List";
 import Profile from "@/components/Profile/Profile";
-import { getProfileSSRProps } from "@/fetch-data/profile-props";
+import { getListSSRProps } from "@/fetch-data/list-props";
 import { GetServerSidePropsContext } from "next";
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  return await getProfileSSRProps(context);
+  return await getListSSRProps(context);
 }
 
-export default Profile;
+export default List;

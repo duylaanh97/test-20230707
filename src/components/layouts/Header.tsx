@@ -7,17 +7,17 @@ import Image from "next/image";
 const tabMenu = [
   {
     name: "自分の記録",
-    slug: "/1",
+    slug: "/my-profile",
     logo: "/icons/listing.svg",
   },
   {
     name: "チャレンジ",
-    slug: "/2",
+    slug: "/my-list",
     logo: "/icons/challenge.svg",
   },
   {
     name: "お知らせ",
-    slug: "/2",
+    slug: "/",
     logo: "/icons/info.svg",
   },
   {
@@ -32,7 +32,7 @@ const Header = () => {
   const router = useRouter();
   const currentPath = useMemo(() => {
     return router.pathname;
-  }, [router]);
+  }, []);
 
   return (
     <header

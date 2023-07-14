@@ -82,9 +82,7 @@ const data = {
   ],
 };
 const HealthyChart = () => {
-  return (
-    <Line options={options} data={data} className="!h-[312px] !w-full px-16" />
-  );
+  return <Line options={options} data={data} className="!w-full px-16" />;
 };
 
 export default HealthyChart;

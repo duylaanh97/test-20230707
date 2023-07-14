@@ -45,16 +45,38 @@ export default function Home(props: IHomeProps) {
   const { listRecord } = props;
   return (
     <MainLayout>
-      <main className="items-center justify-between">
-        <div className="grid grid-cols-5 items-center">
-          <Image
-            src={"/images/main_photo.svg"}
-            alt="home-image-process"
-            className="w-full h-full col-span-2"
-            width={540}
-            height={312}
-          />
-          <div className="w-full h-full bg-[rgba(46,46,46,1)] col-span-3">
+      <div className="items-center justify-between">
+        <div className="grid grid-cols-2 items-center">
+          <div className="relative">
+            <Image
+              src={"/images/main_photo.svg"}
+              alt="home-image-process"
+              className="w-full h-full"
+              width={540}
+              height={312}
+            />
+            <div className="absolute top-0 justify-center items-center flex text-white w-full h-full">
+              {/* <svg
+                className="w-32 h-32 transform translate-x-1 translate-y-1"
+                x-cloak
+                aria-hidden="true"
+              >
+                <circle
+                  className="text-white shadow-[#FC7400]"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                  stroke-dasharray="circumference"
+                  stroke-dashoffset="circumference - percent / 100 * circumference"
+                  stroke="currentColor"
+                  fill="transparent"
+                  r="50"
+                  cx="60"
+                  cy="60"
+                />
+              </svg> */}
+            </div>
+          </div>
+          <div className="w-full h-full bg-[rgba(46,46,46,1)]">
             <HealthyChart />
           </div>
         </div>
@@ -86,47 +108,7 @@ export default function Home(props: IHomeProps) {
           title="記録をもっと見る"
           classNames="w-[296px] mx-auto text-center py-4 mt-10"
         />
-
-        {/* <CardList
-          description="2021.05.17   23:25"
-          image="/images/record-1.png"
-          title="魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ"
-          tags={[
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-            "魚料理",
-            "和食",
-            "DHA",
-          ]}
-        />
-        <CardRecord description="05.21.Morning" image="/images/record-1.png" />
-        <CardProfile /> */}
-      </main>
+      </div>
     </MainLayout>
   );
 }
