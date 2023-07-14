@@ -3,6 +3,9 @@ import HealthyButton from "../layouts/HealthyButton";
 import MainLayout from "../layouts/MainLayout";
 import CardRecomend from "../layouts/Card/CardRecomend";
 import CardList from "../layouts/Card/CardList";
+import clsx from "clsx";
+import { useContext } from "react";
+import { DeviceContext } from "@/context/device.context";
 
 const listRecomend = [
   {
@@ -35,10 +38,18 @@ interface IListProps {
 }
 
 const List = ({ listNews }: IListProps) => {
+  const { isMobile } = useContext(DeviceContext);
   return (
     <MainLayout>
-      <div className="items-center justify-between px-96">
-        <div className="flex justify-center gap-10 w-full">
+      <div className="">
+        <div
+          className={clsx(
+            "grid grid-cols-4 gap-10 py-10 max-w-[80rem] mx-auto",
+            {
+              "!grid-cols-2 gap-4": isMobile,
+            }
+          )}
+        >
           {listRecomend.map((item, index) => {
             return (
               <CardRecomend
@@ -50,7 +61,14 @@ const List = ({ listNews }: IListProps) => {
           })}
         </div>
 
-        <div className="grid grid-cols-4 gap-10">
+        <div
+          className={clsx(
+            "grid grid-cols-4 gap-10 py-10 max-w-[80rem] mx-auto",
+            {
+              "!grid-cols-2 gap-4": isMobile,
+            }
+          )}
+        >
           {listNews.map((item, idx) => {
             return (
               <CardList

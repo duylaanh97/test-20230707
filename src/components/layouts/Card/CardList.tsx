@@ -14,7 +14,7 @@ const CardList = ({ description, image, title, tags }: ICardListProps) => {
       <div className="relative">
         <Image
           alt=""
-          className="w-full"
+          className="w-full object-cover"
           src={image}
           width={234}
           height={144.47}
@@ -25,10 +25,7 @@ const CardList = ({ description, image, title, tags }: ICardListProps) => {
           </div>
         </div>
       </div>
-      <div className="break-all line-clamp-2">
-        {title}
-        魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメ魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…
-      </div>
+      <div className="break-all line-clamp-2">{title}</div>
 
       <div className="break-all line-clamp-1">
         {tags.map((item: string, index: number) => {

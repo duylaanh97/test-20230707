@@ -133,7 +133,9 @@ const cssFontString = `
 export default function Document() {
   return (
     <Html lang="en">
-      <Head></Head>
+      <Head>
+        <title>Healthy</title>
+      </Head>
       <body className="relative m-0">
         <Main />
         <NextScript />

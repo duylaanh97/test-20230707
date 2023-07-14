@@ -10,7 +10,7 @@ const CardRecord = ({ description, image }: ICardReportProps) => {
     <div className="relative w-full bg-red-600">
       <Image
         alt=""
-        className="w-full h-full"
+        className="w-full h-full object-cover"
         src={image}
         width={234}
         height={234}
