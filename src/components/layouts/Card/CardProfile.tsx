@@ -20,7 +20,7 @@ const CardProfile = ({ image, title, description }: ICardProfileProps) => {
         <div className="text-[rgba(255,204,33,1)] text-[25px] leading-[30px] font-normal">
           {title}
         </div>
-        <div className="text-[rgba(255,255,255,1)] text-fs-14 font-light bg-[rgba(255,150,60,1)] w-[80%] mx-auto mt-1">
+        <div className="text-[rgba(255,255,255,1)] text-fs-14 font-light bg-[rgba(255,150,60,1)] max-w-[12rem] mx-auto mt-1 py-1">
           {description}
         </div>
       </div>

@@ -9,12 +9,12 @@ export async function getProfileSSRProps(context: GetServerSidePropsContext) {
       description: "自分のカラダの記録",
     },
     {
-      image: "/images/body-morning.svg",
+      image: "/images/my-exercies.svg",
       title: "MY EXERCISE",
       description: "自分の運動の記録",
     },
     {
-      image: "/images/body-morning.svg",
+      image: "/images/my-daily.svg",
       title: "MY DIARY",
       description: "自分の日記",
     },

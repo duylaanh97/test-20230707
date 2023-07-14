@@ -8,42 +8,42 @@ export async function getHomeSSRProps(context: GetServerSidePropsContext) {
     limit: 8,
     results: [
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-1.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-2.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-3.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-4.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-5.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-6.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-1.svg",
         time: "5.21",
         category: "Morning",
       },
       {
-        image: "/images/record-1.png",
+        image: "/images/meal-3.svg",
         time: "5.21",
         category: "Morning",
       },
