@@ -37,7 +37,7 @@ const Footer = () => {
     <footer id="footer" className="w-full z-10 bg-[#414141]">
       <div
         className={clsx("flex items-center py-3 h-[104px] md:h-[104px] px-40", {
-          "!block h-full": isMobile,
+          "!block h-full !px-4": isMobile,
         })}
       >
         {dataFooter.map((item, index) => (

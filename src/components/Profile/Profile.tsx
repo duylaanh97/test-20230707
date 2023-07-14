@@ -200,7 +200,7 @@ const Profile = ({ listAction, listDaily, listExercies }: IProfileProps) => {
 
         <HealthyButton
           title="自分の日記をもっと見る"
-          classNames="w-[296px] mx-auto text-center py-4 mt-10"
+          classNames="max-w-[10rem] mx-auto text-center py-4 mt-10"
         />
       </div>
     </MainLayout>

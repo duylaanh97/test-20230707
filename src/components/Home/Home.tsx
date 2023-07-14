@@ -169,7 +169,7 @@ export default function Home(props: IHomeProps) {
         <div className="grid grid-cols-5 items-center">
           <div
             className={clsx("relative h-full col-span-2", {
-              "col-span-12": isMobile,
+              "!col-span-12": isMobile,
             })}
           >
             <Image
@@ -179,30 +179,17 @@ export default function Home(props: IHomeProps) {
               width={540}
               height={312}
             />
-            {/* <div className="absolute top-0 justify-center items-center flex text-white w-full h-full">
-              <div className="circleProcess" data-percent="45">
-                <div className="circleProcess__percent">
-                  <div className="halfCirlce"></div>
-                </div>
-                <div className="circleProcess__percent">
-                  <div className="halfCirlce"></div>
-                </div>
-                <div className="circleProcess__Content">
-                  <div className="circleProcess__ContentBox">
-                    <h2></h2>
-                    <h2>0%</h2>
-                    <p></p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
           <div
             className={clsx("w-full col-span-3 h-full bg-[rgba(46,46,46,1)]", {
-              "col-span-12": isMobile,
+              "!col-span-12": isMobile,
             })}
           >
-            <HealthyChart options={options} data={data} classNames="" />
+            <HealthyChart
+              options={options}
+              data={data}
+              classNames={isMobile && "!p-2"}
+            />
           </div>
         </div>
 
@@ -210,7 +197,7 @@ export default function Home(props: IHomeProps) {
           className={clsx(
             "grid grid-cols-4 justify-center gap-28 py-2 max-w-[80rem] mx-auto",
             {
-              "!px-2 !grid-cols-2 gap-0": isMobile,
+              "!px-2 !py-0 !grid-cols-1 !gap-0": isMobile,
             }
           )}
         >
@@ -242,7 +229,7 @@ export default function Home(props: IHomeProps) {
 
         <HealthyButton
           title="記録をもっと見る"
-          classNames="w-[296px] mx-auto text-center py-4 mt-10"
+          classNames="max-w-[10rem] mx-auto text-center py-4 mt-10"
         />
       </div>
     </MainLayout>
